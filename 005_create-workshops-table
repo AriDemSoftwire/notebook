@@ -1,0 +1,7 @@
+CREATE TABLE Workshop (
+    id SERIAL PRIMARY KEY,
+    name text,
+    notes text,
+    start_datetime timestamp,
+    end_datetime timestamp
+);
