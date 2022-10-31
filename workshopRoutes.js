@@ -9,12 +9,13 @@ const workshopRoutes = Router();
 
 workshopRoutes.get("/workshopsoverview/:id", async (req, res) => {
     try {
-        const id = request.params.id;
+        const id = req.params;
         //       const workshops = await workshopRepository.getAllWorkshops();
 
         for (let i in workshops) {
             if (id === workshops[i].id) {
                 res.send(workshops[i]);
+                return;
             }
         }
     } catch (err) {
